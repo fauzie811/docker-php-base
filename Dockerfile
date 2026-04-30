@@ -19,6 +19,6 @@ RUN setcap 'cap_net_bind_service=+ep' /usr/local/bin/caddy
 COPY --from=composer/composer:2 /usr/bin/composer /usr/local/bin/composer
 
 # Instal additional dependencies
-RUN apk add --no-cache py3-pip py3-pillow py3-cffi py3-brotli gcc musl-dev python3-dev pango font-noto && pip install weasyprint --break-system-packages
 RUN apk add --no-cache mariadb-client
-RUN apk add --no-cache chromium-swiftshader ttf-freefont
+# RUN apk add --no-cache py3-pip py3-pillow py3-cffi py3-brotli gcc musl-dev python3-dev pango font-noto && pip install weasyprint --break-system-packages
+# RUN apk add --no-cache chromium-swiftshader ttf-freefont
